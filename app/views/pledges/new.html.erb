@@ -1,0 +1,17 @@
+<h1>Pledges#new</h1>
+
+<%= form_for ([:project, @pledge]) do |f| %>
+  
+  <div class="field">
+    <%= f.label :amount %> <br/>
+    <%= f.number_field :amount %>
+    
+  </div>
+
+  <div class="action">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+

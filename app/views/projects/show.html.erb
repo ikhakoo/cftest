@@ -1,0 +1,18 @@
+<h1>Project</h1>
+
+<%= render @project %>
+
+
+<div class="rewards">
+  <% @project.rewards.each do |reward| %>
+    <p><%= reward.title %>, <%= reward.description %>, <%= reward.amount %></p>
+
+<%= button_to 'Make Donation', project_pledges_path(@project, :reward_id => reward.id), :method => 'post'%>
+<%= link_to "Get this reward", new_project_pledge_path(@project.id), :reward_id => reward.id %>
+
+  <% end %>
+
+</div>
+
+
+

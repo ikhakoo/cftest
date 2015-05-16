@@ -1,0 +1,4 @@
+README
+
+This is our crowdfunder app.
+It will be a funding platform.
